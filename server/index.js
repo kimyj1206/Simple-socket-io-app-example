@@ -12,6 +12,7 @@ io.on('connection', (socket) => {
 
   // server -> client send
   socket.on('message', (message) => {
+    // socket id는 길어서 컷함
     io.emit('message', `${socket.id.substr(0, 2)} said ${message}`)
   })
 });

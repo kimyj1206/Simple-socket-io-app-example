@@ -7,6 +7,7 @@ socket.on('message', (text) => {
   document.querySelector('ul').appendChild(element);
 });
 
+// button click => input에 적은 value(=text)가 server로 send
 document.querySelector('button').onclick = () => {
   const text = document.querySelector('input').value;
   socket.emit('message', text);
